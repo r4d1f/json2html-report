@@ -72,7 +72,7 @@ def main():
         # getting list of the files to convert to HTML
         #json_files = ['./json/hadolint_results.json', './json/dockle_results.json', './json/trivy_results.json']
         mypath = "./json/"
-        json_files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+        json_files = [join(mypath, f) for f in listdir(mypath) if isfile(join(mypath, f))]
         print(json_files)
 
         # converting each file and adding some textual info into resulting HTML
